@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- <form action="" method="POST">
+        <label for="email">帳號：</label>
+        <input id="email" type="text" name="email">
+        <label for="password">密碼：</label>
+        <input id="password" type="password" name="password">
+        <button type="submit">登入系統</button>
+    </form> -->
+    <form action="">
+        <label for="name">姓名</label>
+        <input id="name" type="text" name="姓名" placeholder="請輸入真實姓名" />
+        <!-- 依靠name屬性去判斷是否為同一集合 -->
+        <!-- <input id="male" type="radio" name="gender" value="male" required />
+        <label for="male">男性</label>
+        <input id="female" type="radio" name="gender" value="female" required />
+        <label for="female">女性</label> -->
+        <label for="gender">性別</label>
+        <select name="gender" id="gender" required>
+            <option></option>
+            <option value="male">男性</option>
+            <option value="female">女性</option>
+        </select>
+
+        <label for="email">信箱</label>
+        <input id="email" type="email" name="信箱" required />
+        <label for="age">年齡</label>
+        <!-- 0<input type="range" name="年齡" min="0" max="125" step="1" />125 // 要搭配js去顯示目前選擇的值 -->
+        <!-- <input id="age" type="number" name="年齡" min="0" max="125" step="0.01" /> -->
+
+        <label for="password">密碼：</label>
+        <input id="password" type="password" name="密碼" minlength="6" maxlength="12" />
+        <input type="checkbox" onclick="showPassword" id="show" />Show Password 
+
+        <input id="edata" type="checkbox" checked name="edata" value="訂閱"/>
+        <label for="edata">訂閱電子報</label>
+
+        <label for="area">地區：</label>
+        <input list="areaList" type="text" name="地區" id="area">
+        <datalist id="areaList">
+            <option value="台北市">台北市</option>
+            <option value="桃園市">桃園市</option>
+            <option value="台中市">台中市</option>
+            <option value="台南市">台南市</option>
+            <option value="高雄市">高雄市</option>
+            <option value="花蓮縣">花蓮縣</option>
+        </datalist>
+
+        <label for="suggestion">建議：</label>
+        <textarea 
+            name="suggestion"
+            id="suggestion"
+            cols="30"
+            rows="10"
+            placeholder="給網站的建議"
+        ></textarea>
+
+        <!-- <input type="file" /> -->
+        <button type="submit">提交表單</button>
+    </form>
+
+    <script>
+        // 顯示密碼用js撰寫
+        let checkbox = document.querySelector("#show");
+        let password = document.querySelector("#password");
+        checkbox.addEventListener("click", () => {
+            if(password.type == "password") {
+                password.type = "text";
+            } else {
+                password.type = "password";
+            }
+        });
+    </script>
+</body>
+</html>

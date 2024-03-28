@@ -1,0 +1,105 @@
+* {
+    color: blue;
+}
+
+body {
+    font-size: 20px;
+    background-image: url("./assets/故宮圖片1.jpeg");
+    background-size: cover;
+    background-position: bottom;
+}
+
+h1 {
+    text-align: center;
+    background-color: transparent;
+    width: 500px;
+    height: 50px;
+    border: 5px solid black;
+    padding-top: 5px 20px;
+    opacity: 0.8;
+    /* transition: background-color 2s; */
+    transition: all 2s ease-in-out;
+}
+
+h1:hover {
+    /* transition: all 2s; // 但此時滑鼠移開後不會等2s才轉換 */
+    background-color: aqua;
+    color: violet;
+}
+
+/* element selector */
+h2 {
+    font-size: 1em;
+    color:green;
+}
+
+/* id selector */
+#first-paragraph {
+    color:rgb(100, 25, 200);
+}
+
+/* class selector */
+.blue-text {
+    color:blue;
+}
+
+.large-text {
+    font-size: 32px;
+}
+
+/* element selector and class selector並用 */
+tr.large-text {
+    font-size: 32px;
+
+}/* element selector and class selector並用 */
+tr.large-text {
+    font-size: 32px;
+}
+
+/* pseudo element */
+p::before {
+    content: ">> ";
+    color: blue;
+}
+p::first-line {
+    font-size: 32px;
+}
+*::selection {
+    background-color: lightblue;
+}
+
+
+table, th, tr, td {
+    border-bottom: 1px solid black;
+    border-collapse: collapse;
+}
+
+tr:hover {
+    background-color: aqua;
+}
+
+td, th {
+    text-align: center;
+    padding: 0.25rem 0.5rem;
+}
+
+.myClass {
+    /* display: block; */
+    background-color: pink;
+    padding: 2rem 3rem ;
+
+}
+
+#image1 {
+    width: 600px;
+    height: 300px;
+}
+
+#image2 {
+    width: 500px;
+    height: 400px;
+}
+
+img:hover {
+    cursor: pointer;
+}
