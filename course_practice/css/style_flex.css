@@ -1,6 +1,8 @@
 div.container {
     border: 3px solid black;
     display: flex;
+    /* flex-direction: column; */
+    flex-wrap: wrap;
 }
 
 div.box {
@@ -8,11 +10,11 @@ div.box {
     height: 250px;
 }
 
-.small-box {
+/* .small-box {
     width: 50px;
     height: 50px;
     border: 2px solid red;
-}
+} */
 
 .box1 {
     background-color: aqua;
