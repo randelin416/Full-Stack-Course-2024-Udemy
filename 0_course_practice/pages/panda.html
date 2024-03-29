@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            display: flex;
+            flex-wrap: wrap;
+        }
+        /* 先設定div為flex item，在讓其中的圖片符合div的寬度 */
+        body div {
+            flex: 1 1 500px;
+        }
+        body div img {
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <img src="../assets/panda_image/panda.jpeg" alt="">
+    </div>
+    <div>
+        <img src="../assets/panda_image/small_panda.jpeg" alt="">
+    </div>
+    <div>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nobis, fugiat esse quam quia explicabo maiores, accusamus architecto praesentium voluptate vel excepturi culpa sapiente quae amet voluptas repellat, laborum atque rem?
+    </div>
+</body>
+</html>

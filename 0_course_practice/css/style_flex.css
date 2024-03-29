@@ -1,13 +1,18 @@
 div.container {
     border: 3px solid black;
+    height: 1500px;
     display: flex;
     /* flex-direction: column; */
     flex-wrap: wrap;
+    /* justify-content: space-evenly; */
+    /* align-items: baseline; */
 }
 
 div.box {
-    width: 250px;
-    height: 250px;
+    /* width: 250px;
+    height: 250px; */
+    /* flex-basis: 200px; 根據預設是row或column而定 */
+    flex: 1 1 100px;
 }
 
 /* .small-box {
@@ -19,22 +24,27 @@ div.box {
 .box1 {
     background-color: aqua;
     display: flex;
+    /* flex-grow: 10; */
 }
 
 .box2 {
     background-color: yellowgreen;
+    /* flex-grow: 1; */
 }
 
 .box3 {
     background-color: dodgerblue;
+    /* flex-grow: 1; */
 }
 
 .box4 {
     background-color: firebrick;
+    /* flex-grow: 1; */
 }
 
 .box5 {
     background-color: cornflowerblue;
+    /* flex-grow: 1; */
 }
 
 div.container2 {
