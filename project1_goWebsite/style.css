@@ -1,8 +1,13 @@
+@font-face {
+    font-family: "myFont";
+    src: url("./清松手寫體1.ttf");
+}
+
 * {
     padding: 0;
     margin: 0;
     box-sizing: border-box; /* 較容易設定寬跟高 */
-    font-family: DFkai-sb, sans-serif;
+    font-family: "myFont", DFkai-sb, sans-serif; /* 優先顯示myFont字體，沒有則抓標楷體 */
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -187,4 +192,10 @@ section.taiwan h3 {
 .taiwan ul {
     margin-left: 2rem;
     padding: 0.5rem;
+}
+
+@media screen and (max-width: 600px) {
+    header nav ul {
+        flex-direction: column;
+    }
 }
