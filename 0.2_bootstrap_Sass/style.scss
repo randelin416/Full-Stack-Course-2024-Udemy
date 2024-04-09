@@ -1,0 +1,18 @@
+$themeColor: orange;
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@import "./header";
+
+h1 {
+    background-color: white;
+    color: $themeColor;
+}
+
+h2 {
+    color: $themeColor;
+}
