@@ -5,7 +5,12 @@
   box-sizing: border-box;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   font-weight: normal;
 }
 
@@ -25,10 +30,6 @@ body header {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  position: sticky;
-  top: 0;
-  z-index: 10;
-  box-shadow: 0 10px 6px -6px #777;
 }
 body header section.logo {
   flex: 2 1 400px;
@@ -63,7 +64,7 @@ body header nav ul li a:hover {
 }
 body main section.background-img {
   min-height: 70vh;
-  background-image: url(../assets/日本櫻花.jpg);
+  background-image: url("../images/日本櫻花.jpg");
   background-size: cover;
   background-position: center;
   transition: all 0.75s ease;
@@ -176,26 +177,7 @@ body footer section.links a img {
   body header nav ul {
     flex-direction: column;
   }
-  body header nav ul a {
-    padding: 0.5rem 0.2rem;
+  body header nav ul li {
+    padding: 0.5rem 0.25rem;
   }
-}
-/* width */
-::-webkit-scrollbar {
-  width: 10px;
-}
-
-/* Track */
-::-webkit-scrollbar-track {
-  background: #f1f1f1;
-}
-
-/* Handle */
-::-webkit-scrollbar-thumb {
-  background: rgba(152, 57, 255, 0.5);
-}
-
-/* Handle on hover */
-::-webkit-scrollbar-thumb:hover {
-  background: #69236a;
 }/*# sourceMappingURL=style.css.map */
