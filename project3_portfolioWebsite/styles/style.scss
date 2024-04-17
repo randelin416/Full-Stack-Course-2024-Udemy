@@ -9,8 +9,12 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 body {
+    overflow-x: hidden; // 有section超過網頁時不會產生水平拉桿
     nav {
         background-color: white;
+        position: sticky;
+        top: 0;
+        z-index: 5;
         ul {
             display: flex;
             li {
@@ -66,10 +70,124 @@ body {
             div.img-area {
                 // border: 2px solid blue;
                 flex-basis: 450px;
-                width: 700px;
+                width: 00px;
                 img {
                     width: 100%;
                 }
+            }
+        }
+        section.about-me {
+            background-color: rgb(238, 234, 255);
+            padding: 5rem 0rem;
+            display: flex;
+            justify-content: center;
+            // align-items: center;
+
+            section.description {
+                width: 50%;
+                text-align: center;
+                h2 {
+                    font-size: 2rem;
+                }
+                .progress-bar-area {
+                    p {
+                        margin-top: 1rem;
+                    }
+                }
+            }
+        }
+        section.resume {
+            display: flex;
+            flex-wrap: wrap;
+            padding: 2rem;
+
+            section.table {
+                --bs-table-bg: none; // bootstrap中繼承的屬性修改
+                // border: 2px solid black;
+                flex: 5 0 500px; // 0表示表格不會在網頁縮小時收縮 但會有overflow留白問題
+                padding: 2rem;
+                table {
+                    border-collapse: collapse;
+                    tr {
+                        border-bottom: 2px solid gray;
+                        transition: all 0.2s ease;
+                        &:hover {
+                            background-color: rgb(245, 235, 255);
+                        }
+                    }
+
+                }
+            }
+
+            section.picture {
+                // border: 2px solid red;
+                flex: 1 1 500px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                position: relative;
+                img {
+                    width: 80%;
+                }
+
+                div.purpleRect1 {
+                    width: 30vw;
+                    height: 90vh;
+                    border: 10px solid rgb(245, 235, 255);
+                    position: absolute;
+                    top: -50px;
+                    left: 150px;
+                    z-index: -1;
+                }
+                div.purpleRect2 {
+                    width: 50vw;
+                    height: 40vh;
+                    border: 10px solid rgb(245, 235, 255);
+                    position: absolute;
+                    top: 300px;
+                    left: -300px;
+                    z-index: -1;
+                }
+                div.purpleRect3 {
+                    width: 50vw;
+                    height: 40vh;
+                    border: 10px solid rgb(245, 235, 255);
+                    position: absolute;
+                    top: 30px;
+                    left: -50px;
+                    z-index: -1;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 800px) {
+    body {
+        main {
+            section.about-me {
+                section.description {
+                    width: 80%;
+                }
+            }
+            section.resume {
+                overflow-x: auto; // overflow時不會留白
+                section.picture {
+                    div.purpleRect1, div.purpleRect2, div.purpleRect3 {
+                        display: none;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 500px) {
+    body {
+        nav {
+            position: static;
+            ul {
+                flex-direction: column;
             }
         }
     }
